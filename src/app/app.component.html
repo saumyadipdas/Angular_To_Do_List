@@ -1,0 +1,33 @@
+
+<h1> TO DO List </h1>
+
+
+<!-- <ul let="item of list">
+-- @for (item of list) --
+<li> item</li>
+</ul> -->
+
+
+<!--Iterating-->
+<!-- <ul *ngFor="let item of items"> 
+  <li>{{item}}</li>
+</ul> -->
+
+
+<!-- <app-list></app-list> -->
+
+
+<div>
+  <input type="text" [(ngModel)]="newTask">
+  <button (click)="addToList()"> {{desiredButtonName}} </button>
+</div>
+
+<br/>
+<div style="border:1px solid black; width: 30%">
+  <ul *ngFor="let x of taskItems; let index = index;">
+    <li> {{x}}
+      <span><input (click)="editTask(index)" type="button" value="Edit" class="col-2 btn btn-danger"> </span>
+      <span><input (click)="deleteTask(index)" type="button" value="Delete" class="col-2 btn btn-danger"> </span>
+    </li>
+  </ul>
+</div>
